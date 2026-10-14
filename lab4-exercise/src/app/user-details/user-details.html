@@ -1,0 +1,36 @@
+<div class="container">
+  <h2>Submitted User Information</h2>
+
+  @if (user) {
+    <table>
+      <tr>
+        <th>Field</th>
+        <th>Information</th>
+      </tr>
+
+      <tr>
+        <td>First Name</td>
+        <td>{{ user.firstName }}</td>
+      </tr>
+
+      <tr>
+        <td>Last Name</td>
+        <td>{{ user.lastName }}</td>
+      </tr>
+
+      <tr>
+        <td>Phone Number</td>
+        <td>{{ user.phone || 'Not provided' }}</td>
+      </tr>
+
+      <tr>
+        <td>Email</td>
+        <td>{{ user.email || 'Not provided' }}</td>
+      </tr>
+    </table>
+  } @else {
+    <p>No user information has been submitted.</p>
+  }
+
+  <a routerLink="/form">Back to Form</a>
+</div>
